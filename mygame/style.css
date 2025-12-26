@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "NeoDunggeunmo";
+  src: url("assets/fonts/NeoDunggeunmo.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NeoDunggeunmo";
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* START */
+#startScreen {
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/startground.png") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 40px;
+  color: #1a2a4a;
+  text-shadow: 2px 2px 0 #eee;
+}
+
+#tapText {
+  margin-top: 20px;
+  font-size: 26px;
+  color: gray;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}
+
+/* GAME */
+#gameScreen {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/gameground.png") center / cover no-repeat;
+}
+
+#backpack {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 160px;
+}
+
+.item {
+  position: fixed;
+  width: 70px;
+  touch-action: none;
+}
+
+/* SUBTITLE */
+#subtitle {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #1a2a4a;
+  text-shadow: 1px 1px 0 #eee;
+  display: none;
+}
+
+/* CENTER MESSAGE */
+#centerMessage {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  display: none;
+}
+
+/* CLEAR */
+#clearScreen {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  color: orange;
+  font-size: 48px;
+  text-shadow: 3px 3px 0 black;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEMO */
+#memoScreen {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#memoScreen img {
+  max-width: 90vw;
+}
+
+.memoText {
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+}
+
